@@ -250,8 +250,8 @@ double Dleak;
 vector<double> Dlevels; 
 
 int selectOptimalDifs(int dNum){
-	for(int i = 0; i < n; i++) Ecosystem[dNum].xEnvIso[i]=xEnv[i];
-	for(int i = 0; i < n; i++) Ecosystem[dNum].Difs[i]=0.0;
+	for(int i = 0; i < n; i++) Ecosystem[dNum].xEnvIso[i] = xEnv[i];
+	for(int i = nt; i < n; i++) Ecosystem[dNum].Difs[i] = 0.0;
 	for(double t = 0.0; t < T/30.0; t+=dt) Ecosystem[dNum].IsoDynamics();
 
 	int intDLeakLevel[n];
@@ -295,7 +295,7 @@ int selectOptimalDifs(int dNum){
 int selectOptimalDifsMut(){
 	int LeakChemNum = 0;
 	int intDLeakLevel[n];
-	for(int y = 0; y < n; y++) intDLeakLevel[y]=-1;
+	for(int y = 0; y < n; y++) intDLeakLevel[y] = -1;
 	for(int y = nt+Nenzyme; y < n; y++){
 		intDLeakLevel[y] = 0;
 		LeakChemNum++;
