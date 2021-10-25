@@ -113,9 +113,7 @@ inline int Cell::makeRandomNet(){
 }
 
 inline int Cell::IsoDynamics(){
-	
 	for(int i = 0; i < n; i++) for(int count = 0; count < 4; count++) k[i][count] = 0.0;
-
 	
 	for(int count = 0; count < 4; count++){
 		for(int i = 0; i < n; i++){
@@ -156,8 +154,6 @@ inline int Cell::IsoDynamics(){
 vector<Cell> Ecosystem;
 
 int PopDynamics(){
-	
-	
 	int m = Ecosystem.size();
 	int varSize = m*n + n + m;
 
